@@ -1,0 +1,32 @@
+.section-container{
+    padding: 40px 20px;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.form__title{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    margin-bottom:24px;
+}
+.form__text{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.input-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+.form__field{
+    height: 48px;
+}
+.form__field--name{
+    margin-bottom: 20px;
+}
