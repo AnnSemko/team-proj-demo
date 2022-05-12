@@ -4,18 +4,21 @@
     background-position: center;
     background-size: cover;
     background-color: rgba(17, 21, 24, 1);
-    background-image: url(../images/contacts/mob/contacts-bg_480px.png); 
+    background-image: url(../images/contacts/contacts-bg_480px.png); 
 
     @media screen and (min-device-pixel-ratio: 2),
         screen and (min-resolution: 192dpi),
         screen and (min-resolution: 2dppx) {
-            background-image: url(../images/contacts/mob/contacts-bg_480px@2x.png);
+            background-image: url(../images/contacts/contacts-bg_480px@2x.png);
         }
 }
 .colorized {
     color: var(--accent-color);
 }
 .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     &__title{
         margin-bottom:24px;
@@ -37,7 +40,7 @@
     }
     &__field{
         height: 48px;
-        max-width: 100%;
+        width: 100%;
         padding-left: 28px;
         background-color: transparent;
         border: 1px solid var(--color-main);
@@ -46,12 +49,16 @@
         
         
         &::placeholder{
-            margin-left: 48px;
+            font-size: 14px;
+            line-height: 1.21;
             color: var(--color-main);
         }
-    }
-    &__field--name{
-        margin-bottom: 20px;
+        &--name{
+            margin-bottom: 20px;
+        }
+        &--tel{
+            margin-bottom: 40px;
+        }
     }
 }
 .form__field:invalid {
@@ -65,21 +72,85 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-bottom: 40px;
+    width: 100%;
 }
-.button-primary{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    width: 280px;
-    height: 48px;
-    border: none;
-    font-weight: bold;
-    font-size: 12px;
-    line-height: 1.25;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    background-color: var(--accent-color);
-    color: var(--color-main);
+.button-primary--resize{
+    width: 100%;
+}
+
+@media screen and (min-width: 768px){
+    .section-form{
+        background-image: url(../images/contacts/contacts-bg_768px.png/);
+        
+        @media screen and (min-device-pixel-ratio: 2),
+            screen and (min-resolution: 192dpi),
+            screen and (min-resolution: 2dppx) {
+                background-image: url(../images/contacts/contacts-bg_768px@2x.png);
+            }
+    }
+    .form{
+        &__title{
+            font-size: 26px;
+        }
+        &__text{
+            font-size: 14px;
+        }
+        &__field--name{
+            margin-bottom: 32px;
+        }
+    }
+    .text-wrapper{
+        max-width: 452px;
+    }
+    .input-wrapper{
+        align-items: center;
+        max-width: 336px;
+    }
+}
+
+@media screen and (min-width: 1680px){
+    .section-form {
+        background-image: url(../images/contacts/contacts-bg_1680px.png/);
+
+        @media screen and (min-device-pixel-ratio: 2),
+        screen and (min-resolution: 192dpi),
+        screen and (min-resolution: 2dppx) {
+            background-image: url(../images/contacts/contacts-bg_1680px@2x.png);
+        }
+    }
+    .form{
+        &__title {
+            margin-bottom: 40px;
+            font-size: 46px;
+        }
+        &__text {
+            margin-bottom: 60px;
+            font-size: 30px;
+        }
+        &__field {
+            width: 100%;
+            height: 70px;
+
+            &--name{
+                margin-bottom: 32px;
+            }
+            &--tel{
+                margin-bottom: 40px;
+            }
+
+            &::placeholder {
+                font-size: 20px;
+            }
+        }
+    }
+    .input-wrapper{
+        max-width: 528px;
+    }
+    .text-wrapper {
+        max-width: 1090px;
+    }
+    .button-primary--resize {
+        width: 100%;
+        font-size: 14px;
+    }
 }
