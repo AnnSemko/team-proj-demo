@@ -1,0 +1,58 @@
+.about__title {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 1.3;
+    letter-spacing: 0.03em;    
+    margin-bottom: 20px;
+}
+
+.about__img {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.about__name {
+    display: block;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.08em;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #B9B9B9;
+    margin-bottom: 20px;
+}
+
+.about__list {
+    margin-bottom: 36px;
+}
+
+.about__list-item {
+    display: flex;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.21;
+    letter-spacing: 0.06em;
+
+
+    &::before {
+        margin-right: 8px;
+        content: '';
+        width: 18px;
+        height: 14px;
+        background-image: url(../images/icons/tick-icon.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 24px;
+    }
+}
+
+.about__text {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.67;   
+    color: var(--primary-color-text);
+}
