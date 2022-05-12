@@ -1,17 +1,16 @@
-        <h2 class="form__title">Registration for a <span>free</span>phone <span>consultation</span> on the nuances of English UPE</h2>
-        <p ckass="form__text">Leave a request for participation in a <span>free lesson</span>. <br>A consultant will contact you and answer your questions</p>
-        <div class="input-wrapper">  
-            <input class="form__field form__field--name" type="text" pattern="text" placeholder="Имя*">
 <section class="section section-form">
     <div class="container">
-        <form class="form" action="">
+        <form class="form" method="post">
+            
             <h2 class="form__title">Registration for a <span class="colorized">free </span>phone <span class="colorized">consultation</span> on the nuances of English UPE</h2>
-            <p class="form__text">Leave a request for participation in a <span class="colorized">free lesson</span>. <br>A consultant will contact you and answer your questions</p>
-            <div class="input-wrapper">  
-                <input class="form__field form__field--name" type="text" pattern="text" placeholder="Имя*">
-                <input class="form__field form__field--tel" type="tel" pattern="tel" placeholder="Телефон*">
+            <div class="text-wrapper">
+                <p class="form__text">Leave a request for participation in a <span class="colorized">free lesson</span>. <br>A consultant will contact you and answer your questions</p>
             </div>
-            <button class="button-primary" type="submit">хочу на бесплатное занятие</button>
+            <div class="input-wrapper">  
+                <input class="form__field form__field--name" type="text" pattern="[a-z]{2,20}" placeholder="Name*">
+                <input class="form__field form__field--tel" type="tel" pattern="[0-9]{10,12}" placeholder="Phone*" >
+                <button class="button-primary button-primary--resize" type="submit">I want a free lesson</button>
+            </div>
         </form>
     </div>
 </section>
