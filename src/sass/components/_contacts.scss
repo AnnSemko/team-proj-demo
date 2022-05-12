@@ -1,29 +1,47 @@
-.section-container{
-    padding: 40px 20px;
+.section-form{
+    height: 100%;
+    background-color: rgba(17, 21, 24, 1);
+    background-image: url(./images/contacts/mob/contacts-bg_480px.jpg);
 }
-.form{
+.form {
+    &__title{
+        margin-bottom:24px;
+        text-align: center;
+        font-weight: 800;
+        font-size: 14px;
+        line-height: 1.30;
+        letter-spacing: 0.03em;
+        color: var(--color-main);
+    }
+    &__text{
+        margin-bottom: 40px;
+        text-align: center;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 1.25;
+        letter-spacing: 0.08em;
+        color: var(--color-main);
+    }
+    &__field{
+        height: 48px;
+        background-color: transparent;
+        border: 1px solid var(--color-main);
+        
+        &::placeholder{
+            margin-left: 48px;
+            color: var(--color-main);
+        }
+    }
+    &__field--name{
+        margin-bottom: 20px;
+    }
+}
+.input-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
-
-    .form__title{
-        text-align: center;
-        margin-bottom:24px;
-    }
-    .form__text{
-        text-align: center;
-        margin-bottom: 40px;
-    }
-    .input-wrapper{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        margin-bottom: 40px;
-    }
-    .form__field{
-        height: 48px;
-    }
-    .form__field--name{
-        margin-bottom: 20px;
-    }
+    margin-bottom: 40px;
+}
+.colorized{
+    color: var(--accent-color);
 }
