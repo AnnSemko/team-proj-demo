@@ -26,3 +26,20 @@ body {
     background-color: var(--color-main);
     color: var(--primary-color);
 }
+
+.button-primary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 280px;
+    height: 48px;
+    border: none;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 1.25;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    background-color: var(--accent-color);
+    color: var(--color-main);
+}
