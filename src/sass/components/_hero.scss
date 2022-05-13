@@ -1,6 +1,14 @@
 .hero{
 padding-top: 40px;
+padding-bottom: 60px;
+background-image: url(/images/heroImages/mobile-wave.svg);
+// background-position: bottom;
+background-position-y: 55%;
+background-repeat: no-repeat;
+background-size:cover;
+// background-size: 768px 300px;
 }
+
 
 .hero-container__main-title{
   margin-bottom: 8px;
@@ -34,4 +42,12 @@ padding-top: 40px;
 }
 .second{
   color: var(--accent-color);
+}
+.button-link{
+  color: var(--color-main);
+}
+.hero__picture{
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
 }
