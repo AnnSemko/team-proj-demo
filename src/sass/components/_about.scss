@@ -56,3 +56,13 @@
     line-height: 1.67;   
     color: var(--primary-color-text);
 }
+
+.about__link {
+    display: block;
+    margin-top: 18px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.55;
+    text-decoration-line: underline;
+    color: var(--accent-color);
+}
