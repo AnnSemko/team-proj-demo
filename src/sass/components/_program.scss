@@ -23,37 +23,19 @@ h4 {
 
 .program__container {
     padding-left: 68px;
-}
 
-// .semester__list {
-//     position: relative;
-// }
-
-.semester {
-    position: relative;
-
-}
-
-.semester::before {
-    position: absolute;
-    left: 0;
-    top: 0;
-    display: block;
-
-    content: "";
-    width: 1px;
-    height: 1243px;
-    margin-right: 26px;
-    
-    background-color: var(--accent-color);
+    &::before {
+        background-image: url('./src/images/program/program-img.jpg');
+    }
 }
 
 
 .semester__list:not(:last-child) {
-    padding-bottom: 40px;
+    margin-bottom: 40px;
 }
 
 .semester-title {
+    position: relative;
     margin-bottom: 4px;
 
     font-weight: 700;
@@ -62,6 +44,20 @@ h4 {
     letter-spacing: 0.08em;
     
     color: var(--color-main);
+
+    // &::before {
+    //     position: absolute;
+    //     top: 8px;
+    //     left: -31px;
+
+    //     display: block;
+    //     content: '';
+    //     width: 12px;
+    //     height: 12px;
+    //     border-radius: 50%;
+    //     background: var(--accent-color);
+
+    // }
 }
 
 .semester-plan__list:not(:last-child) {
@@ -108,3 +104,50 @@ h4 {
 
     color: var(--primary-color-text);
 }
+
+
+
+@media screen and (max-width:767px) {
+    .semester {
+            position: relative;
+    
+        }
+    
+        .semester::before {
+            position: absolute;
+            top: 12px;
+            left: -26px;
+    
+            content: "";
+            width: 1px;
+            height: 1132px;
+    
+            background-color: var(--color-main);
+        }
+        .semester__list {
+            position: relative;
+        }
+    
+        .semester__list::before {
+            position: absolute;
+            top: 8px;
+            left: -31px;
+    
+            // display: block;
+
+            
+            content: '';
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--accent-color);
+    
+        }
+}
+
+@media screen and (min-width: 334.99px) {
+    .semester::before {
+            height: 1112px;
+}
+}
+
