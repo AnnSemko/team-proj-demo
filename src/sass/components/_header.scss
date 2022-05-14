@@ -1,0 +1,104 @@
+.header-components {
+    display: flex;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.logo {
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+    color: var(--primary-white-color);
+}
+.logo__first-line {
+    display: flex;
+    align-items: center;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 17px;
+    line-height: 1.23;
+    letter-spacing: 0.04em;
+
+    svg {
+        fill: var(--accent-color);
+        width: 14px;
+        height: 19px;
+        margin: 0 4px 4px 4px;
+
+    @media screen and (min-width: 768px) {
+        width: 22px;
+        height: 30px;
+    }
+    }
+
+    @media screen and (min-width: 768px) {
+      font-size: 26px;
+    }
+  }
+    .logo__second-line {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 5px;
+    line-height: 1.22;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+// 
+    @media screen and (min-width: 768px) {
+      font-size: 8px;
+    }
+  }
+  .text-accent {
+      color: var(--accent-color);
+  }
+
+.navigation__list {
+    display: none;
+    @media screen and (min-width:1680px) {
+        display: flex;
+    }
+        li {
+      margin-right: 40px;
+    }
+}
+.navigation__link {
+    font-family: Montserrat;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1.21;
+    text-transform: uppercase;
+    color: var(--primary-color-text);
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+    }
+}
+
+.consultation-btn {
+    display: none;
+    @media screen and (min-width:768px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 5px;
+    border: 2px solid var(--accent-color);
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 1.25;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    background-color: transparent;
+    color: var(--accent-color);
+    }
+    @media screen and (max-width:1679.78px) {
+        margin-right: 40px;
+    }
+}
+
+.mobile-menu__btn {
+    display: inline-flex;
+    @media screen and (min-width:1680px) {
+        display: none;
+    }
+}
