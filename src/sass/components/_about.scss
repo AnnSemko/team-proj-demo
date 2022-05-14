@@ -70,8 +70,9 @@
   
 }
 
-.about__link {
-    display: block;
+.about__link {    
+    display: inline-block;
+    border-radius: 5px;
     margin-top: 18px;
     font-weight: 500;
     font-size: 12px;
@@ -79,6 +80,11 @@
     text-decoration-line: underline;
     color: var(--accent-color);
     cursor: pointer;
+    transition: transform var(--transition-duration) var(--timing-function);
+
+    &:hover {
+        transform: scale(1.1);
+    }
 }
 
 @media screen and (min-width: 768px) {
