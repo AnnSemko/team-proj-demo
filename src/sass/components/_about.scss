@@ -82,7 +82,7 @@
     cursor: pointer;
     transition: transform var(--transition-duration) var(--timing-function);
 
-    &:hover {
+    &:hover, &:focus {
         transform: scale(1.1);
     }
 }
