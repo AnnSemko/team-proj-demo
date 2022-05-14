@@ -1,14 +1,18 @@
 .header-components {
     display: flex;
     align-items: center;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    @media screen and (min-width:768px) {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
 }
 .logo {
     display: flex;
     flex-direction: column;
     margin-right: auto;
-    color: var(--primary-white-color);
+    color: var(--primary-color);
 }
 .logo__first-line {
     display: flex;
@@ -97,6 +101,8 @@
 }
 
 .mobile-menu__btn {
+    width: 21px;
+    height: 12px;
     display: inline-flex;
     @media screen and (min-width:1680px) {
         display: none;
@@ -104,13 +110,47 @@
 }
 // ---MOBILE-MENU
 .mobile-menu {
-    display: flex;
-    flex-direction: column;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    padding-left: 20px;
+    padding-right: 20px;
+    background: rgba(17, 21, 24, 0.9);
+    z-index: 9;
+
+    @media screen and (max-width:1679.88px) {
+        &.is-open {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+        }
+    }
 }
+.mobile-menu__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+    margin-bottom: 40px;
+    @media screen and (min-width:768px) {
+        padding-top: 40px;
+        margin-bottom: 80px;
+    }
+}
+// .mobile-menu {
+    // display: flex;
+    // flex-direction: column;
+// }
 .consultation-btn--mobile {
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
     padding: 15px 5px;
@@ -122,11 +162,21 @@
     text-transform: uppercase;
     background-color: transparent;
     color: var(--accent-color);
+
+    @media screen and (min-width:768px) {
+        display: none;
+    }
 }
 .mobile-menu__list {
-    background-color: black;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+    @media screen and (min-width:768px) {
+        margin-left: auto;
+    }
 }
 .mobile-menu__item {
+    display: inline-flex;
     font-weight: 800;
     font-size: 20px;
     line-height: 1.8;
@@ -140,4 +190,14 @@
         font-size: 26px;
     }
 
+}
+.mobile-menu__btn--close {
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+}
+.logo--mobile-menu {
+    color: var(--color-main);
 }
