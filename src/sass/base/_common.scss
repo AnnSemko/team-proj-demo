@@ -26,6 +26,9 @@ body {
     background-color: var(--color-main);
     color: var(--primary-color);
 }
+html{
+  scroll-behavior: smooth;
+}
 
 .button-primary {
     display: flex;
