@@ -52,10 +52,10 @@
     @media screen and (min-width: 768px) {
       font-size: 8px;
     }
-  }
-  .text-accent {
-      color: var(--accent-color);
-  }
+}
+.text-accent {
+    color: var(--accent-color);
+}
 
 .navigation__list {
     display: none;
@@ -112,7 +112,7 @@
 }
 // ---MOBILE-MENU
 .mobile-menu {
-    transform: translateY(-100%);
+    transform: translateX(100%);
     visibility: hidden;
     pointer-events: none;
     position: fixed;
@@ -120,15 +120,13 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    padding-left: 20px;
-    padding-right: 20px;
     background: rgba(17, 21, 24, 0.9);
     z-index: 9;
-    transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     @media screen and (max-width:1679.88px) {
         &.is-open {
-            transform: translateY(0);
+            transform: translateX(0);
             visibility: visible;
             pointer-events: auto;
 
@@ -150,6 +148,7 @@
     color: var(--color-main);
 }
 .mobile-menu__btn--close {
+    padding: 5px;
     display: flex;
     align-items: center;
     border: none;
