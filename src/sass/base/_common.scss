@@ -27,21 +27,39 @@ body {
     color: var(--primary-color);
 }
 
-.counter-item {
-    color: var(--primary-color);
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 1.42;
+.button-primary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0;
+    width: 280px;
+    height: 48px;
+    border: none;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 1.25;
     letter-spacing: 0.08em;
-    box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
+    text-transform: uppercase;
+    background-color: var(--accent-color);
+    color: var(--color-main);
+    pointer-events: auto;
+    cursor: pointer;
 
-    &::before {
-        display: block;
-        counter-increment: section;
-        content: "— 0" counter(section);
-        color: var(--accent-color);
-        margin-bottom: 8px;
+}
 
-        
+    
+
+    @media screen and (min-width: 768px){
+        width: 260px;
+    }
+
+    @media screen and (min-width: 1680px){
+        width: 354px;
+        height: 70px;
+        font-size: 14px;
     }
 }
+
+  }
+
