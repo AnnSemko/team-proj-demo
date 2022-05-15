@@ -26,3 +26,21 @@ body {
     background-color: var(--color-main);
     color: var(--primary-color);
 }
+
+.counter-item {
+    color: var(--primary-color);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.42;
+    letter-spacing: 0.08em;
+
+    &::before {
+        display: block;
+        counter-increment: section;
+        content: "— 0" counter(section);
+        color: var(--accent-color);
+        margin-bottom: 8px;
+
+        
+    }
+}

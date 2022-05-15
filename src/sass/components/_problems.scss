@@ -26,39 +26,32 @@
 .counter-list {
     counter-reset: section;
     list-style-type: none;
-    padding: 20px 32px 24px;
     background-color: var(--color-main);
 
 }
 
 
 
-.counter-item {
-    color: var(--primary-color);
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 1.42;
-    letter-spacing: 0.08em;
 
-    &::before {
-        display: block;
-        counter-increment: section;
-        content: "— 0" counter(section);
-        color: var(--accent-color);
-        margin-bottom: 8px;
-
-        &:not(:last-child) {
-            margin-bottom: 16px;
-        }
+@media screen and (max-width:1679) {
+    .problems-section__item:nth-child(odd) {
+        margin-right: 40px;
     }
+
 }
 
 @media screen and (max-width:767px) {
     .problems-section {
         padding-top: 24px;
     }
+    .problems-section__items {
+        padding: 20px 32px 24px;
+    
+    &:not(:last-child) {
+        margin-bottom:16px; 
+    }
 
-
+    }
     .problems-section__head {
         max-width: 280px;
     }
@@ -85,12 +78,6 @@
     }
 }
 
-@media screen and (max-width:1679) {
-    .problems-section__item:nth-child(odd) {
-        margin-right: 40px;
-    }
-
-}
 
 @media screen and (min-width:1680px) {
 
@@ -113,14 +100,21 @@
 
     .problems-section__list {
         padding-left: 140px;
+        padding-right:192px ;
         padding-top: 60px;
         padding-bottom: 60px;
+        margin-bottom: -40px;
     }
 
     .problems-section__items {
         font-size: 20px;
         width: 336px;
-        margin-right: 85px;
+        
+
+        &:nth-child(3n+1) {
+            margin-right: 85px;
+
+        }
 
         &:nth-child(3n + 2) {
             margin-right: 222px;
