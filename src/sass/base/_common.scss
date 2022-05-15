@@ -59,6 +59,14 @@ html {
     font-size: 14px;
   }
 }
+
+
+.counter-list {
+    counter-reset: section;
+    list-style-type: none;
+    background-color: var(--color-main);
+
+}
 .counter-item {
     color: var(--primary-color);
     font-size: 14px;
