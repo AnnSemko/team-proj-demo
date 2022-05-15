@@ -9,7 +9,8 @@
     height: 100%;
   }
 }
-.advantages__text {
+
+.advantages__item {
   display: flex;
   align-items: center;
   color: var(--primary-color);
@@ -18,6 +19,7 @@
   font-weight: 700;
   line-height: 1.65;
   letter-spacing: 0.08em;
+
   @media screen and (min-width: 768px) {
     font-size: 14px;
   }
@@ -26,24 +28,23 @@
     font-size: 20px;
   }
 }
-.advantages__text--first::before {
+.image--first::before {
   content: '';
   background-size: cover;
   background-image: url(/images/icon-first.svg);
   height: 60px;
   width: 59px;
+
   @media screen and (min-width: 768px) {
     height: 60px;
     width: 59px;
   }
   @media screen and (min-width: 1680px) {
-    position: absolute;
-    transform: translateX(-88px);
     height: 102px;
     width: 100px;
   }
 }
-.advantages__text--second::before {
+.image--second::before {
   content: '';
   background-size: cover;
   background-image: url(/images/icon-second.svg);
@@ -54,13 +55,11 @@
     width: 59px;
   }
   @media screen and (min-width: 1680px) {
-    position: absolute;
-    transform: translateX(-88px);
     height: 102px;
     width: 100px;
   }
 }
-.advantages__text--third::before {
+.image--third::before {
   content: '';
   background-size: cover;
   background-image: url(/images/icon-third.svg);
@@ -71,9 +70,37 @@
     width: 59px;
   }
   @media screen and (min-width: 1680px) {
-    position: absolute;
-    transform: translateX(-88px);
     height: 102px;
     width: 100px;
+  }
+}
+
+.advantages-container {
+  @media screen and (min-width: 1680px) {
+    padding-top: 40px;
+    padding-bottom: 80px;
+  }
+  @media screen and (min-width: 768px) {
+    padding-top: 44px;
+    padding-bottom: 85px;
+  }
+  @media screen and (max-width: 767px) {
+    padding-top: 40px;
+    padding-bottom: 45px;
+  }
+}
+
+// @media screen and (min-width: 1680px) {
+//   .advantages__item::before {
+//     margin-right: -13px;
+//   }
+// }
+
+.advantages__item::before {
+  @media screen and (min-width: 480px) {
+    margin-right: 10px;
+  }
+  @media screen and (min-width: 1680px) {
+    margin-right: -13px;
   }
 }
