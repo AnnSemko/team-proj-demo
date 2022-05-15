@@ -68,7 +68,7 @@
         .how-we-do-it__link:hover &,
         .how-we-do-it__link:focus & {
             background-color: var(--accent-color);
-        }
+        };
     
         &:not(:last-child) {
             margin-bottom: 16px
@@ -89,6 +89,13 @@
     
     ;
     
+        // .how-we-do-it__link:hover .how-we-do-it__item {
+        //     background-color: var(--accent-color);
+        // }
+    
+        // .how-we-do-it__link:focus .how-we-do-it__item {
+        //     background-color: var(--accent-color);
+        // };
     
     .how-we-do-it__link {
         // align-items: center;
@@ -101,7 +108,10 @@
         
         transition: background-color var(--transition-duration) var(--timing-function);
     
-       
+    //    &:hover .how-we-do-it__item,
+    //    &:focus .how-we-do-it__item {
+    //        background-color: var(--accent-color);
+    //    };
     
         @media screen and (min-width: 768px) {
            
