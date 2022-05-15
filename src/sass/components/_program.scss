@@ -75,6 +75,20 @@ h4 {
     color: var(--color-main);
 }
 
+
+
+.semester-plan__description--position {
+    &::before {
+            display: block;
+            content: "";
+            width: 12px;
+            height: 1px;
+            margin-bottom: 14px;
+
+            background-color: var(--accent-color);
+        }
+}
+
 .semester-plan__list:not(:last-child) {
     padding-bottom: 4px;
 }
@@ -107,8 +121,12 @@ h4 {
     }
 }
 
+.semester-title--decorative-element {
+    margin-bottom: 13px;
+}
+
 .hidden-title {
-    padding: 10px 0;
+    display: none;
 }
 
 .semester-plan__description {
@@ -322,6 +340,16 @@ h4 {
 
         font-size: 30px;
         line-height: 93%;
+    }
+
+    .semester-title--decorative-element {
+        margin-bottom: 40px;
+    }
+
+    .semester-plan__description--position {
+        &::before {
+            margin-bottom: 23px;
+        }
     }
 
     .semester-plan__list:not(:last-child) {
