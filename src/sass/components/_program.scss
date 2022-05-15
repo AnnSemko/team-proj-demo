@@ -174,10 +174,6 @@ h4 {
         
         }
     }
-
-    .semester-plan__description--position {
-        max-width: 67px;
-    }
 }
 
 
@@ -354,6 +350,14 @@ h4 {
 
     .semester-plan__list:not(:last-child) {
         margin-bottom: 24px;
+    }
+
+    .semester-plan__title::before {
+        content: "";
+        width: 20px;
+        height: 2px;
+        margin-right: 10px;
+    
     }
 
     .semester-plan__title {
