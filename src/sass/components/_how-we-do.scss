@@ -1,14 +1,14 @@
-.how-we-do-it {
-    margin: 40px 0;
+// .how-we-do-it {
+//     margin: 40px 0;
 
-    @media screen and (min-width: 1680px) {
-        margin: 80px 0;
+//     @media screen and (min-width: 1680px) {
+//         margin: 80px 0;
 
 
-    }
+//     }
 
-    ;
-}
+//     ;
+// }
 
 
 .how-we-do-it__h2 {
@@ -62,6 +62,11 @@
         // margin: 0 auto;
         box-shadow: 0px 8px 26px rgba(0, 0, 0, 0.1);
         padding: 32px 12px 8px 12px;
+
+        .how-we-do-it__link:hover &,
+        .how-we-do-it__link:focus & {
+            background-color: var(--accent-color);
+        }
     
         &:not(:last-child) {
             margin-bottom: 16px
@@ -94,10 +99,7 @@
         
         transition: background-color var(--transition-duration) var(--timing-function);
     
-        &:hover,
-        &:focus {
-            background-color: var(--accent-color);
-        }
+       
     
         @media screen and (min-width: 768px) {
            
