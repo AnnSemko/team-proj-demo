@@ -14,8 +14,7 @@
     
 .benefits__list {
     padding: 20px  24px 20px 20px;
-    background-color: var(--color-main);
-    box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
+    
 }
 
 .benefits__item {
@@ -30,20 +29,7 @@
 
 }
 
-.counter-list {
-    counter-reset: section;
-    list-style-type: none;
-    
-}
 
-.counter-item::before {
-    display: block;
-    counter-increment: section;
-    content: "— 0" counter(section);
-    color: var(--accent-color);
-    margin-bottom: 8px;
-   
-}
 @media screen and (max-width:1679px) {
     .benefits__item {
         width: 236px;
