@@ -20,7 +20,7 @@
     text-align: center;
     letter-spacing: 0.03em;
 
-    color: #111518;
+    color: var(--primary-color);
 
     margin-bottom: 32px;
 
@@ -42,11 +42,15 @@
 .how-we-do-it__list {
 
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    // flex-direction: column;
+    // align-items: center;
+    
 
     @media screen and (min-width: 768px) {
-        flex-direction: row;
+        display: flex;
+        // flex-direction: row;
         flex-wrap: wrap;
         margin: -16px;
     }
@@ -55,6 +59,7 @@
 ;
 
 .how-we-do-it__item {
+    // margin: 0 auto;
  box-shadow: 0px 8px 26px rgba(0, 0, 0, 0.1);
 
     &:not(:last-child) {
@@ -65,17 +70,19 @@
 
 
     .how-we-do-it__link {
+        // align-items: center;
+        // justify-content: center;
         display: flex;
         flex-direction: column;
         text-decoration: none;
         width: 300px;
         height: 280px;
         padding: 32px 12px 8px 12px;
-        transition: background-color 200ms cubic-bezier(0.4, 0, 0.2, 1);      
+        transition: background-color var(--transition-duration) var(--timing-function);      
 
         &:hover,
             &:focus {
-                background-color: #FF6B09;
+                background-color: var(--accent-color);
             }
 
         @media screen and (min-width: 768px) {
@@ -98,12 +105,12 @@
     // margin-bottom: 20px;
     margin: 0 auto;
     margin-bottom: 20px;
-    fill: #FF6B09;
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    fill: var(--accent-color);
+    transition: fill var(--transition-duration) var(--timing-function);
 
     .how-we-do-it__link:hover &,
     .how-we-do-it__link:focus & {
-        fill: #ffffff
+        fill: var(--color-main)
     }
 
 }
@@ -120,10 +127,10 @@
     text-align: center;
     letter-spacing: 0.08em;
 
-    color: #111518;
+    color: var(--primary-color);
 
     margin-bottom: 4px;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color var(--transition-duration) var(--timing-function);
 
     .how-we-do-it__link:hover &,
     .how-we-do-it__link:focus & {
@@ -152,17 +159,17 @@
 
 .how-we-do-it__divider {
 
-    color: #FF6B09;
+    color: var(--accent-color);
     text-align: center;
     font-weight: 700;
     font-size: 20px;
     line-height: 1.6;
     // background-color: green;
     margin-bottom: 4px;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color var(--transition-duration) var(--timing-function);
     .how-we-do-it__link:hover &,
         .how-we-do-it__link:focus & {
-            color: #ffffff
+            color: var(--color-main)
         }
 
     @media screen and (min-width: 768px) {
@@ -194,12 +201,12 @@
     text-align: center;
     letter-spacing: 0.08em;
 
-    color: #B9B9B9;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    color: var(--primary-color-text);
+    transition: color var(--transition-duration) var(--timing-function);
 
     .how-we-do-it__link:hover &,
         .how-we-do-it__link:focus & {
-            color: #ffffff
+            color: var(--color-main)
         }
 
     @media screen and (min-width: 1680px) {
