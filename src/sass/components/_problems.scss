@@ -68,6 +68,7 @@
         flex-wrap: wrap;
         margin-bottom: -40px;
         padding-left: 80px;
+       
 
     }
 
@@ -83,12 +84,12 @@
 
     .problems-section {
 
-        background-image: url(../images/fire.svg),
+        background-image: url(../images/fi.svg),
             linear-gradient(to bottom,
                 var(--primary-color) 77%,
                 var(--color-main) 77%);
         background-repeat: no-repeat;
-        background-position:bottom right;
+        background-position: bottom 142px right,bottom right;
         padding-top: 80px;
     }
 
