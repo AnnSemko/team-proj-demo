@@ -44,7 +44,7 @@ body {
     background-color: var(--accent-color);
     color: var(--color-main);
 
-}
+
 
     pointer-events: auto;
     cursor: pointer;
@@ -74,4 +74,4 @@ body {
         content: "— 0" counter(section);
         color: var(--accent-color);
         margin-bottom: 8px;
-  }
+  }}
