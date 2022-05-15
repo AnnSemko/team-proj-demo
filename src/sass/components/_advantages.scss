@@ -75,27 +75,6 @@
   }
 }
 
-.advantages-container {
-  @media screen and (min-width: 1680px) {
-    padding-top: 40px;
-    padding-bottom: 80px;
-  }
-  @media screen and (min-width: 768px) {
-    padding-top: 44px;
-    padding-bottom: 85px;
-  }
-  @media screen and (max-width: 767px) {
-    padding-top: 40px;
-    padding-bottom: 45px;
-  }
-}
-
-// @media screen and (min-width: 1680px) {
-//   .advantages__item::before {
-//     margin-right: -13px;
-//   }
-// }
-
 .advantages__item::before {
   @media screen and (min-width: 480px) {
     margin-right: 10px;
