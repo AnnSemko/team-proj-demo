@@ -133,21 +133,26 @@
     transition: color var(--transition-duration) var(--timing-function);
 
     &::after {
-            content: "—";
+            content: "";
             display: block;
-            color: var(--accent-color);
-            text-align: center;
-            font-weight: 700;
-            font-size: 20px;
-            line-height: 1.6;
+            margin: 10px auto;
+            width: 20px;
+            height: 2px;
+            background-color: var(--accent-color);
+            // color: var(--accent-color);
+            // text-align: center;
+
+            // font-weight: 700;
+            // font-size: 20px;
+            // line-height: 1.6;
             // background-color: green;
             margin-bottom: 4px;
-            transition: color var(--transition-duration) var(--timing-function);
+            transition: background-color var(--transition-duration) var(--timing-function);
     
             .how-we-do-it__link:hover &,
             .how-we-do-it__link:focus & {
-                color: var(--color-main)
-            }
+                background-color: var(--color-main)
+            };
     
             @media screen and (min-width: 768px) {
                 margin-bottom: 8px;
