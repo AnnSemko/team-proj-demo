@@ -1,0 +1,374 @@
+h4 {
+    padding: 0;
+    margin: 0;
+}
+
+.program {
+    position: relative;
+    background: var(--primary-color);
+    padding-top: 40px;
+}
+
+.program__title {
+    margin-bottom: 40px;
+    
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 1.3;
+    letter-spacing: 0.03em;
+
+    color: var(--color-main);
+}
+
+.program__container {
+
+    padding-left: 68px;
+
+    &::after {
+        position: absolute;
+        right: 0px;
+        bottom: 40px;
+
+        content: '';
+        display: block;
+        width: 150px;
+        height: 137px;
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+                rgba(47, 48, 58, 0.4)), 
+                url(../images/program/program-img.jpg);
+        background-size: contain;
+    }
+}
+
+@media (min-device-pixel-ratio: 2),
+(min-resolution: 192dpi),
+(min-resolution: 2dppx) {
+    .program__container::after {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+                rgba(47, 48, 58, 0.4)),
+                url(../images/program/program-img-2x.jpg);
+    }
+}
+
+.semester__list::before {
+    position: absolute;
+    top: 8px;
+    left: -31px;
+
+    content: '';
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--accent-color);
+
+}
+
+.semester-title {
+    position: relative;
+    margin-bottom: 4px;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 2;
+    letter-spacing: 0.08em;
+    
+    color: var(--color-main);
+}
+
+
+
+.semester-plan__description--position::before {
+    display: block;
+    content: "";
+    width: 12px;
+    height: 1px;
+    margin-bottom: 14px;
+
+    background-color: var(--accent-color);
+        
+}
+
+.semester-plan__list:not(:last-child) {
+    padding-bottom: 4px;
+}
+
+.semester-plan__title {
+    margin-bottom: 4px;
+
+    display: flex;
+    align-items: center;
+
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 1.7;
+    letter-spacing: 0.08em;
+    
+    color: var(--accent-color);
+
+    &::before {
+        content: "";
+        width: 12px;
+        height: 1px;
+        margin-right: 6px;
+        
+
+        background-color: var(--accent-color);
+    }
+
+    &:last-child {
+        padding: 20px 0;
+    }
+}
+
+.semester-title__decorative-element {
+    margin-bottom: 13px;
+}
+
+.hidden-title {
+    display: none;
+}
+
+.semester-plan__description {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.7;
+    letter-spacing: 0.08em;
+
+    color: var(--primary-color-text);
+}
+
+@media screen and (max-width:1679px) {
+    .semester {
+        position: relative;
+
+        &::before {
+            position: absolute;
+            top: 12px;
+            left: -26px;
+        
+            content: "";
+            width: 1px;
+            height: 1132px;
+            border-right: 1px solid var(--color-main);
+        }
+    }
+  
+    .semester__list {
+        position: relative;
+
+        &:not(:last-child) {
+            margin-bottom: 40px;
+        }
+
+        &::before {
+            position: absolute;
+            top: 8px;
+            left: -31px;
+        
+            content: '';
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--accent-color);
+        
+        }
+    }
+}
+
+
+@media screen and (max-width:767px) {
+    .program {
+        padding-bottom: 145px;
+    }
+
+    .program__title {
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 334.99px) {
+    .semester::before {
+        height: 1112px;
+    }
+}
+
+
+@media screen and (min-width:768px) and (max-width:1679px) {
+    .program {
+        padding-top: 60px;
+        padding-bottom: 180px;
+    }
+
+    .program__container {
+        padding-left: 184px;
+
+        &::after {
+            right: 0px;
+            bottom: 80px;
+        
+            width: 368px;
+            height: 268px;
+            background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+                    rgba(47, 48, 58, 0.4)), 
+                    url(../images/program/program-img-tablet.jpg);
+            background-size: contain;
+        }
+    }
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        .program__container::after {
+                background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+                        rgba(47, 48, 58, 0.4)),
+                url(../images/program/program-img-tablet-2x.jpg);
+        }
+    }
+
+    .program__title {
+        font-size: 26px;
+    }
+
+    .semester::before {
+        left: -113px;
+    
+        height: 732px;
+    }
+
+    .semester__list::before {
+        left: -118px;
+    }
+
+    .semester-plan {
+        display: flex;
+    }
+
+    .semester-plan__list {
+        min-width: 156px;
+
+        &:not(:last-child) {
+            margin-right: 28px;
+        }
+    }
+}
+
+
+
+@media screen and (min-width:1680px) {
+    .program {
+        padding-top: 80px;
+        padding-bottom: 366px;
+        position: relative;
+        margin-bottom: -128px;
+    }
+
+    .program__title {
+        margin-bottom: 88px;
+
+        font-size: 46px;
+    }
+
+    .program__container {
+        padding-left: 140px;
+        padding-top: 48px;
+        
+        &::before {
+            position: absolute;
+            top: 225px;
+            left: 0;
+            display: block;
+            content: '';
+            width: 100%;
+            border-bottom: 1px solid var(--color-main);
+        }
+
+        &::after {
+            bottom: 0;
+            left: 0;
+
+            width: 684px;
+            height: 510px;
+            background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+                    rgba(47, 48, 58, 0.4)), 
+                    url(../images/program/program-img-desktop.jpg);
+        }
+    }
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        .program__container::after {
+            background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+                        rgba(47, 48, 58, 0.4)),
+                url(../images/program/program-img-desktop-2x.jpg);
+        }
+    }
+
+    .semester {
+        display: flex;
+    }
+
+    .semester__list {
+        position: relative;
+        width: 240px;
+
+        &:not(:last-child) {
+                margin-right: 40px;
+        }
+
+        &::before {
+            position: absolute;
+            top: -58px;
+            left: 0;
+        
+            content: '';
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: var(--accent-color);
+        
+        }
+    }
+
+    .semester-title {
+        margin-bottom: 24px;
+
+        font-size: 30px;
+        line-height: 93%;
+    }
+
+    .semester-title__decorative-element {
+        margin-bottom: 40px;
+    }
+
+    .semester-plan__description--position::before {
+            margin-bottom: 23px;
+            width: 20px;
+            height: 2px;
+    }
+
+
+    .semester-plan__list:not(:last-child) {
+        margin-bottom: 24px;
+    }
+
+    .semester-plan__title::before {
+        content: "";
+        width: 20px;
+        height: 2px;
+        margin-right: 10px;
+    
+    }
+
+    .semester-plan__title {
+        margin-bottom: 8px;
+
+        font-size: 20px;
+        line-height: 1.65;
+    }
+
+    .semester-plan__description {
+        font-size: 18px;
+        line-height: 156%;
+    }
+}
