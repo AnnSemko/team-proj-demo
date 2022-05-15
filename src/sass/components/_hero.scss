@@ -47,12 +47,20 @@ background-image: url(/images/heroImages/mobile-wave.svg);
     font-size: 12px;
     line-height: 1.25;
     letter-spacing: 0.08em;
+
 }
 .hero__picture{
   margin-top: 40px;
   display: flex;
   justify-content: center;
   width: 100%;
+
+
+}
+@media screen and(max-width:320px){
+  .hero-button{
+     width:100%;
+  }
 }
 
 @media screen and(min-width:768px){
@@ -68,10 +76,6 @@ background-image: url(/images/heroImages/mobile-wave.svg);
           display: flex;
         }
 
-.hero__button{
-  margin-right: 0;
-  margin-left: 0;
-}
         .hero__picture{
           margin-top: 0;
         }
@@ -86,6 +90,8 @@ background-image: url(/images/heroImages/mobile-wave.svg);
         }
         .button-primary{
           width: 260px;
+            margin-right: 0;
+              margin-left: 0;
         }
 }
 
