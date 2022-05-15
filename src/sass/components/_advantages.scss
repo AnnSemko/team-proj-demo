@@ -19,6 +19,7 @@
   font-weight: 700;
   line-height: 1.65;
   letter-spacing: 0.08em;
+
   @media screen and (min-width: 768px) {
     font-size: 14px;
   }
@@ -89,8 +90,17 @@
   }
 }
 
-@media screen and (min-width: 1680px) {
-  .advantages__item::before {
+// @media screen and (min-width: 1680px) {
+//   .advantages__item::before {
+//     margin-right: -13px;
+//   }
+// }
+
+.advantages__item::before {
+  @media screen and (min-width: 480px) {
+    margin-right: 10px;
+  }
+  @media screen and (min-width: 1680px) {
     margin-right: -13px;
   }
 }
