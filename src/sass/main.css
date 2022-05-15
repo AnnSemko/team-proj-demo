@@ -398,7 +398,7 @@ body {
   /* or 26px */
   text-align: center;
   letter-spacing: 0.03em;
-  color: #111518;
+  color: var(--primary-color);
   margin-bottom: 32px;
 }
 
@@ -421,21 +421,18 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 @media screen and (min-width: 768px) {
   .how-we-do-it__list {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     margin: -16px;
@@ -469,12 +466,12 @@ body {
   width: 300px;
   height: 280px;
   padding: 32px 12px 8px 12px;
-  -webkit-transition: background-color 200ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: background-color 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: background-color var(--transition-duration) var(--timing-function);
+  transition: background-color var(--transition-duration) var(--timing-function);
 }
 
 .how-we-do-it__link:hover, .how-we-do-it__link:focus {
-  background-color: #FF6B09;
+  background-color: var(--accent-color);
 }
 
 @media screen and (min-width: 768px) {
@@ -496,14 +493,14 @@ body {
 .how-we-do-it__icon {
   margin: 0 auto;
   margin-bottom: 20px;
-  fill: #FF6B09;
-  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  fill: var(--accent-color);
+  -webkit-transition: fill var(--transition-duration) var(--timing-function);
+  transition: fill var(--transition-duration) var(--timing-function);
 }
 
 .how-we-do-it__link:hover .how-we-do-it__icon,
 .how-we-do-it__link:focus .how-we-do-it__icon {
-  fill: #ffffff;
+  fill: var(--color-main);
 }
 
 .how-we-do-it__title {
@@ -513,10 +510,39 @@ body {
   /* or 143% */
   text-align: center;
   letter-spacing: 0.08em;
-  color: #111518;
+  color: var(--primary-color);
   margin-bottom: 4px;
-  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: color var(--transition-duration) var(--timing-function);
+  transition: color var(--transition-duration) var(--timing-function);
+}
+
+.how-we-do-it__title::after {
+  content: "";
+  display: block;
+  margin: 10px auto;
+  width: 20px;
+  height: 2px;
+  background-color: var(--accent-color);
+  margin-bottom: 4px;
+  -webkit-transition: background-color var(--transition-duration) var(--timing-function);
+  transition: background-color var(--transition-duration) var(--timing-function);
+}
+
+.how-we-do-it__link:hover .how-we-do-it__title::after,
+.how-we-do-it__link:focus .how-we-do-it__title::after {
+  background-color: var(--color-main);
+}
+
+@media screen and (min-width: 768px) {
+  .how-we-do-it__title::after {
+    margin-bottom: 8px;
+  }
+}
+
+@media screen and (min-width: 1680px) {
+  .how-we-do-it__title::after {
+    margin-bottom: 4px;
+  }
 }
 
 .how-we-do-it__link:hover .how-we-do-it__title,
@@ -538,34 +564,6 @@ body {
   }
 }
 
-.how-we-do-it__divider {
-  color: #FF6B09;
-  text-align: center;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 1.6;
-  margin-bottom: 4px;
-  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.how-we-do-it__link:hover .how-we-do-it__divider,
-.how-we-do-it__link:focus .how-we-do-it__divider {
-  color: #ffffff;
-}
-
-@media screen and (min-width: 768px) {
-  .how-we-do-it__divider {
-    margin-bottom: 8px;
-  }
-}
-
-@media screen and (min-width: 1680px) {
-  .how-we-do-it__divider {
-    margin-bottom: 4px;
-  }
-}
-
 .how-we-do-it__text {
   font-weight: 500;
   font-size: 12px;
@@ -573,14 +571,14 @@ body {
   /* or 167% */
   text-align: center;
   letter-spacing: 0.08em;
-  color: #B9B9B9;
-  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  color: var(--primary-color-text);
+  -webkit-transition: color var(--transition-duration) var(--timing-function);
+  transition: color var(--transition-duration) var(--timing-function);
 }
 
 .how-we-do-it__link:hover .how-we-do-it__text,
 .how-we-do-it__link:focus .how-we-do-it__text {
-  color: #ffffff;
+  color: var(--color-main);
 }
 
 @media screen and (min-width: 1680px) {
