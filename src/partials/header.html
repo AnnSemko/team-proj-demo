@@ -19,7 +19,7 @@
           <li><a href="#contacts" class="navigation__link link-reset">contacts</a></li>
         </ul>
       </nav>
-      <button type="button" class="consultation-btn">consultation by phone</button>
+      <button type="button" class="consultation-btn" data-modal-open>consultation by phone</button>
       <button type="button" class="mobile-menu__btn" data-menu-open>
         <svg width="21" height="12">
           <use class="icon-menu" href="././images/symbol-defs.svg#menu"></use>
@@ -55,5 +55,15 @@
       </div>
     </div>
   </div>
+  <div class="backdrop" data-modal>
+    <div class="modal">
+      <button type="button" class="modal-btn" data-modal-close>
+        <svg width="17" height="17" class="close-icon-modal">
+          <use href="././images/symbol-defs.svg#close-icon"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+  <script src="././js/modal.js"></script>
   <script src="././js/menu.js"></script>
 </header>
