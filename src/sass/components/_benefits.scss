@@ -14,8 +14,9 @@
 }
     
 .benefits__list {
+    position: relative;
     padding: 20px  24px 20px 20px;
-
+    box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
 }
 
 .benefits__item {
