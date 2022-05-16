@@ -33,7 +33,7 @@ background-image: url(/images/heroImages/mobile-wave.svg);
   display: flex;
     align-items: center;
     justify-content: center;
-    
+
     padding: 0;
     width: 280px;
     height: 48px;
@@ -45,6 +45,8 @@ background-image: url(/images/heroImages/mobile-wave.svg);
     text-transform: uppercase;
     background-color: var(--accent-color);
     color: var(--color-main);
+    pointer-events: auto;
+    cursor: pointer;
 
     @media screen and (max-width: 479.98px){
       margin: 0 auto;
