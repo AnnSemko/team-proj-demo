@@ -137,6 +137,18 @@ html {
   color: var(--color-main);
   pointer-events: auto;
   cursor: pointer;
+  transition: font-size var(--transition-duration) var(--timing-function),
+  background-color var(--transition-duration) var(--timing-function);
+  
+
+  &:hover,
+  &:focus{
+    font-size: 16px;
+    background-color: #ff9d00;
+    @media screen and (min-width: 1680px){
+      font-size: 20px;
+    }
+  }
 
   @media screen and (min-width: 768px) {
     width: 260px;
