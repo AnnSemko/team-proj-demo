@@ -24,31 +24,33 @@
     }
 }
 
-;
 
 .how-we-do-it__list {
 
     display: flex;
     flex-wrap: wrap;
-        justify-content: center;
+    justify-content: center;
     
     
-        @media screen and (min-width: 768px) {
-            display: flex;
+    @media screen and (min-width: 768px) {
+        display: flex;
        
-            flex-wrap: wrap;
-            margin: -16px;
-        }
+        flex-wrap: wrap;
+        margin: -16px;
+    }
+}
+
+    .how-we-do-it__link {
+        padding: 32px 12px 8px 12px;
     }
     
-    ;
     
     .how-we-do-it__item {
      
         width: 300px;
-            height: 280px;
+        height: 280px;
         box-shadow: 0px 8px 26px rgba(0, 0, 0, 0.1);
-        padding: 32px 12px 8px 12px;
+        
         transition: background-color var(--transition-duration) var(--timing-function);
 
         
@@ -66,17 +68,15 @@
             margin: 16px;
             width: 336px;
            height: 336px;
-            padding: 40px 20px 20px 20px;
+            
         };
                  @media screen and (min-width: 1680px) {
                 width: 528px;
                     height: 492px;
-                     padding: 90px 80px;
                  }
     }
     
-    ;
-    
+      
       
     .how-we-do-it__link {
         display: flex;
@@ -90,21 +90,17 @@
        
     
         @media screen and (min-width: 768px) {
-           
-            // width: 336px;
-            // height: 336px;
+            padding: 40px 20px 20px 20px;
         }
     
         ;
     
         @media screen and (min-width: 1680px) {
-         
+            padding: 90px 80px;
             
         }
     }
     
-    
-    ;
     
     
     .how-we-do-it__icon {
@@ -121,7 +117,7 @@
     
     }
     
-    ;
+    
     
     .how-we-do-it__title {
     
@@ -154,13 +150,13 @@
                 background-color: var(--color-main)
             }
     
-            ;
+            
     
             @media screen and (min-width: 768px) {
                 margin-bottom: 8px;
             }
     
-            ;
+            
     
             @media screen and (min-width: 1680px) {
                 margin-bottom: 4px;
@@ -168,7 +164,7 @@
     
     
     
-                ;
+                
             }
         }
     
@@ -181,7 +177,7 @@
             margin-bottom: 8px;
         }
     
-        ;
+        
     
     
         @media screen and (min-width: 1680px) {
@@ -192,10 +188,10 @@
     
         }
     
-        ;
+        
     }
     
-    ;
+    
     
     
     .how-we-do-it__text {
@@ -219,8 +215,8 @@
             font-size: 18px;
             line-height: 28px;
         }
-    
-        ;
     }
     
-    ;
+        
+    
+    
