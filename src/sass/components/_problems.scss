@@ -34,8 +34,11 @@
     .problems-section {
         padding-top: 24px;
     }
-    .problems-section__items {
+    .problems-section__list {
         padding: 20px 32px 24px;
+    }
+    .problems-section__items {
+         width: 236px;
     
     &:not(:last-child) {
         margin-bottom:16px; 
@@ -59,6 +62,7 @@
         margin-bottom: -40px;
         padding-left: 80px;
         padding-top: 40px;
+        padding-bottom: 32px;
        
 
     }

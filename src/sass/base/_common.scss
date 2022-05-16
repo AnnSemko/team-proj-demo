@@ -65,6 +65,7 @@ html {
     counter-reset: section;
     list-style-type: none;
     background-color: var(--color-main);
+    box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
 
 }
 .counter-item {
@@ -73,7 +74,7 @@ html {
     font-weight: 700;
     line-height: 1.42;
     letter-spacing: 0.08em;
-    box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
+    
 
     &::before {
         display: block;
