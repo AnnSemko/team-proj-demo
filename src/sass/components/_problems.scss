@@ -2,6 +2,7 @@
     background-image: linear-gradient(to bottom,
             var(--primary-color) 77%,
             var(--color-main) 77%);
+            padding-bottom: 40px;
 
 }
 
@@ -34,14 +35,22 @@
     .problems-section {
         padding-top: 24px;
     }
-    .problems-section__items {
+
+    .problems-section__list {
         padding: 20px 32px 24px;
+
+     }
+
+     .problems-section__items {
+         max-width: 225px ;
+
+     
     
     &:not(:last-child) {
         margin-bottom:16px; 
     }
 
-    }
+}
     .problems-section__head {
         max-width: 280px;
     }
