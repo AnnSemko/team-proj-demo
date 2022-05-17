@@ -8,7 +8,7 @@
     closeMenuLinkTwo: document.querySelector('[data-link-2-close]'),
     closeMenuLinkThree: document.querySelector('[data-link-3-close]'),
     closeMenuLinkFour: document.querySelector('[data-link-4-close]'),
-    // closeMenuLinkFive: document.querySelector('[data-link-5-close]'),
+    closeMenuLinkFive: document.querySelector('[data-link-5-close]'),
     menu: document.querySelector('[data-menu]'),
   };
 
@@ -18,7 +18,7 @@
   refs.closeMenuLinkTwo.addEventListener('click', toggleModal);
   refs.closeMenuLinkThree.addEventListener('click', toggleModal);
   refs.closeMenuLinkFour.addEventListener('click', toggleModal);
-  // refs.closeMenuLinkFive.addEventListener('click', toggleModal);
+  refs.closeMenuLinkFive.addEventListener('click', toggleModal);
 
   function toggleModal() {
     refs.menu.classList.toggle('is-open');
