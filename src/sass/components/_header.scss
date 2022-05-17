@@ -120,8 +120,8 @@
 }
 // ---MOBILE-MENU
 .mobile-menu {
-    transform: translateX(100%);
-    visibility: hidden;
+    transform: translateX(101%);
+    // visibility: hidden;
     pointer-events: none;
     position: fixed;
     top: 0;
@@ -135,7 +135,7 @@
     @media screen and (max-width:1679.88px) {
         &.is-open {
             transform: translateX(0);
-            visibility: visible;
+            // visibility: visible;
             pointer-events: auto;
 
         }
