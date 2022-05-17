@@ -1,106 +1,225 @@
+input:focus-visible,
+textarea:focus-visible {
+  outline: none;
+}
+
 .backdrop {
   position: fixed;
   top: 0;
   left: 0;
-
+  display: block;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: opacity var(--transition-duration) var(--timing-function),
+    transform var(--transition-duration) var(--timing-function);
 }
-
-.backdrop.is-hidden {
+.is-hidden {
   opacity: 0;
+  transform: scale(0);
   pointer-events: none;
 }
-
-.modal {
+.window {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
-  min-width: 528px;
-  min-height: 581px;
-  padding: 40px;
+  width: 98%;
+  height: 98%;
+  padding: 20px;
   background-color: var(--primary-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-}
 
-.modal-btn {
-  position: absolute;
-  top: 0;
-  right: 0;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  margin: 0;
-  padding: 0;
-  width: 30px;
-  height: 30px;
-
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  background-color: var(--accent-color);
-  pointer-events: auto;
-  cursor: pointer;
-}
-.modal-form{
-display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.modal-form__paragraph{
-    font-weight: 800;
+  &__text {
+    margin: 0 auto 30px;
+    font-weight: bold;
     font-size: 20px;
-    line-height: 1.3;
-    letter-spacing: 0.03em;
-    margin-bottom: 60px;
-
+    line-height: 1.5;
+    text-align: center;
     color: var(--color-main);
-}
-.form-label{
-  display: block;
-  margin-bottom: 30px;
-}
-.form-wrapper{
-  position: relative;
-  display: block;
-}
-.form-label__contact-input{
-  width: 280px;
-    height: 48px;
-    padding-left: 42px;
-    margin-bottom: 10px;
-
-    border: 1px solid rgba(33, 33, 33, 0.2);
-    box-sizing: border-box;
-
-    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-    &:focus,
-    &:hover {
-      outline: none;
-      border-color: var(--accent-color);
-      cursor: pointer;
-    }
-
-          &::placeholder {
-              font-size: 14px;
-              line-height: 1.21;
-              letter-spacing: 0.01em;
-              color: rgba(117, 117, 117, 0.5);
-          }
-
   }
-.input-icons{
-  position: absolute;
-    top: 50%;
-    left: 12px;
-    transform: translateY(-50%);
-    display: block;
+
+  &__close-button {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    background-image: url(/images/modal/close.svg);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: background-image var(--transition-duration) var(--timing-function);
+
+    &:hover,
+    &:focus {
+      background-image: url(/images/modal/close-active.svg);
+    }
+  }
+}
+
+.input-wrapper {
+  position: relative;
+  background-color: var(--guarantee-graduates-text);
+}
+
+.form__field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+
+  &__lable {
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color: var(--color-main);
+  }
+
+  &__input {
+    width: 100%;
+    height: 48px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    color: var(--color-main);
+    background-color: var(--primary-color);
+    border: 1px solid var(--accent-color);
+    border-radius: 4px;
+    transition: border-color var(--transition-duration) var(--timing-function);
+
+    &:focus-within {
+      outline: transparent;
+      border-color: var(--accent-color);
+    }
+  }
+
+}
+.form__field__input:invalid {
+  border: rgb(255, 42, 42) solid 3px;
+}
+
+.form__field__input:focus-within.form__field__input:valid {
+  border: greenyellow solid 3px;
+}
+.checkbox-text{
+  color: var(--color-main);
+}
+::placeholder {
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.form__comment {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  &__lable {
+    width: 100%;
+    margin-bottom: 4px;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color: var(--color-main);
+  }
+
+  &__textarea {
+    width: 100%;
+    height: 120px;
+    padding: 12px 16px;
+    resize: none;
+    margin-bottom: 20px;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color: var(--color-main);
+    background-color: var(--guarantee-graduates-text);
+    border: 1px solid var(--accent-color);
+    border-radius: 4px;
+    transition: border-color var(--transition-duration) var(--timing-function);
+
+    &:focus {
+      outline: transparent;
+      border-color: var(--accent-color);
+    }
+  }
+}
+
+.form__checkbox {
+  display: block;
+  text-align: center;
+  margin-bottom: 30px;
+
+  &__lable {
+    display: inline-block;
+    font-size: 12px;
+    line-height: 1.17;
+  }
+
+  &__contract-link {
+    font-size: 12px;
+    line-height: 1.17;
+    color: var(--accent-color);
+  }
+
+  &__standart {
+    appearance: none;
+    position: absolute;
+  }
+
+  &__custom {
+    display: inline-block;
+    min-width: 16px;
+    height: 15px;
+    margin-right: 7px;
+    border: 2px solid var(--color-main);
+    border-radius: 4px;
+    overflow: hidden;
+    transition: background-color var(--transition-duration) var(--timing-function),
+      background-image var(--transition-duration) var(--timing-function),
+      border-color var(--transition-duration) var(--timing-function);
+  }
+
+  &__standart:checked+&__custom {
+    border-color: transparent;
+    background-color: var(--accent-color);
+    background-image: url(/images/modal/checkbox.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-origin: border-box;
+  }
+}
+
+.button-primary {
+  &--modal-wind {
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width:1679px) {
+  .window {
+    max-width: 450px;
+    height: 609px
+  }
+}
+
+@media screen and (min-width: 16800px) {
+  .window {
+    max-width: 528px;
+    height: 581px;
+  }
+
+  .form__checkbox__lable {
+    font-size: 14px;
+  }
+
+  .form__checkbox__contract-link {
+    font-size: 14px;
+  }
 }
