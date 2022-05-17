@@ -36,7 +36,7 @@ html {
     align-items: center;
     justify-content: center;
     margin: 0 auto;
-    padding: 0;
+    padding:15px 50px;
     width: 280px;
     height: 48px;
     border: none;
@@ -124,7 +124,7 @@ html {
   align-items: center;
   justify-content: center;
   margin: 0 auto;
-  padding: 0;
+  padding: 15px 50px;
   width: 280px;
   height: 48px;
   border: none;
@@ -137,6 +137,18 @@ html {
   color: var(--color-main);
   pointer-events: auto;
   cursor: pointer;
+  transition: font-size var(--transition-duration) var(--timing-function),
+  background-color var(--transition-duration) var(--timing-function);
+  
+
+  &:hover,
+  &:focus{
+    font-size: 13px;
+    background-color: #ff5500;
+    @media screen and (min-width: 1680px){
+      font-size: 15px;
+    }
+  }
 
   @media screen and (min-width: 768px) {
     width: 260px;
