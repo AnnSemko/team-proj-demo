@@ -58,34 +58,31 @@
       </div>
     </div>
   </div>
-  <div class="backdrop is-hidden" data-modal>
-    <div class="modal">
-      <button type="button" class="modal-btn" data-modal-close>
-        <svg width="17" height="17" class="close-icon-modal">
-          <use href="././images/symbol-defs.svg#close-icon"></use>
-        </svg>
-      </button>
 
-      <form class="modal-form">
-        <p class="modal-form__paragraph">Leave your phone number and we will call you back</p>
-        <label class="form-label">
-          <span class="form-wrapper">
-            <input
-              name="user-phone"
-              class="form-label__contact-input"
-              type="tel"
-              placeholder="+380"
-              required
-            />
-            <svg class="input-icons" width="20" height="19">
-              <use href="/images/symbol-defs.svg#phone-in-footer"></use>
-            </svg>
-          </span>
-        </label>
-
-        <button type="submit" class="hero-button">Submit</button>
-
-        <img src="./images/heroImages/cat.gif" alt="Cat" />"
+  <div class="backdrop container is-hidden" data-modal>
+    <div class="window">
+      <p class="window__text">Please, leave your personal data</h3>
+      <button class="window__close-button" data-modal-close></button>
+      <form class="form" name="order__form">
+          <label class="form__field__lable" for="client-name">Name</label>
+            <input class="form__field__input" type="text" pattern="[a-z, A-Z]{2,20}" name="client-name" id="client-name">
+          <label class="form__field__lable" for="phone-number">Phone</label>
+            <input class="form__field__input" type="tel" pattern="[0-9, +]{10,13}" name="phone-number" id="phone-number">
+          <label class="form__field__lable" for="mail">E-mail</label>
+            <input class="form__field__input" type="email"  name="mail" id="mail">
+        <div class="form__comment">
+          <label class="form__comment__lable" for="comment">Comment</label>
+          <textarea class="form__comment__textarea" name="comment" rows="5" id="comment"
+            placeholder="Eneter your comment"></textarea>
+        </div>
+        <div class="form__checkbox">
+          <label class="form__checkbox__lable">
+            <input class="form__checkbox__standart" type="checkbox" name="agreement" value="agree" />
+            <span class="form__checkbox__custom"></span><span class="checkbox-text">I agree with</span>
+          </label>
+          <a class="form__checkbox__contract-link link-reset" href=""> Contract policy</a>
+        </div>
+        <button class="button-primary button-primary--modal-wind" type="submit">submit</button>
       </form>
     </div>
   </div>
