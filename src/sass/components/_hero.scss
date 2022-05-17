@@ -48,8 +48,26 @@ background-image: url(/images/heroImages/mobile-wave.svg);
     pointer-events: auto;
     cursor: pointer;
 
+      transition: font-size var(--transition-duration) var(--timing-function),
+      background-color var(--transition-duration) var(--timing-function);
+
+  &:hover,
+    &:focus {
+      font-size: 13px;
+      background-color: #ff5500;
+        @media screen and (min-width: 1680px) {
+            font-size: 15px;
+          }
+    }
+
     @media screen and (max-width: 479.98px){
       margin: 0 auto;
+    }
+
+    @media screen and(min-width:768px){
+      width:260px;
+      margin-right: 0;
+      margin-left: 0;
     }
 }
 .first{
@@ -63,14 +81,6 @@ background-image: url(/images/heroImages/mobile-wave.svg);
 }
 .second{
   color: var(--accent-color);
-}
-.button-link{
-  color: var(--color-main);
-  font-weight: 700;
-    font-size: 12px;
-    line-height: 1.25;
-    letter-spacing: 0.08em;
-
 }
 .hero__picture{
   margin-top: 40px;
@@ -111,11 +121,7 @@ background-image: url(/images/heroImages/mobile-wave.svg);
     .hero-container__paragraph {
       margin-bottom: 48px;
     }
-    .button-primary{
-      width: 260px;
-      margin-right: 0;
-      margin-left: 0;
-    }
+
 }
 
 @media screen and(min-width:1680px){
@@ -153,14 +159,12 @@ background-image: url(/images/heroImages/mobile-wave.svg);
 .second{
   color: var(--primary-color);
 }
-.button-primary {
+.hero-button {
   width: 354px;
   height: 70px;
-}
-.button-link{
-  font-weight: 700;
-    font-size: 14px;
-    line-height: 1.21;
-    letter-spacing: 0.14em;
+    font-weight: 700;
+      font-size: 14px;
+      line-height: 1.21;
+      letter-spacing: 0.14em;
 }
 }
