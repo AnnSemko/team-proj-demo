@@ -93,9 +93,10 @@ textarea:focus-visible {
     border-radius: 4px;
     transition: border-color var(--transition-duration) var(--timing-function);
 
-    &:focus-within {
+    &:focus-within,
+    &:hover {
       outline: transparent;
-      border-color: var(--accent-color);
+      border: 2px solid var(--accent-color);
     }
   }
 
@@ -143,9 +144,10 @@ textarea:focus-visible {
     border-radius: 4px;
     transition: border-color var(--transition-duration) var(--timing-function);
 
-    &:focus {
+    &:focus,
+    &:hover {
       outline: transparent;
-      border-color: var(--accent-color);
+      border: 2px solid var(--accent-color);
     }
   }
 }
