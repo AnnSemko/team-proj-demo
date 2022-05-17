@@ -1,18 +1,18 @@
 .header-components {
     display: flex;
     align-items: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    @media screen and (min-width:768px) {
-        padding-top: 40px;
-        padding-bottom: 40px;
-    }
 }
 .logo {
     display: flex;
     flex-direction: column;
     margin-right: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
     color: var(--primary-color);
+    @media screen and (min-width:768px) {
+        padding-top: 40px;
+        padding-bottom: 40px;  
+    }
 }
 .logo__first-line {
     display: flex;
@@ -113,33 +113,42 @@
 .mobile-menu__btn {
     display: flex;
     margin: 0;
-    padding: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
     border: none;
     background-color: transparent;
+    @media screen and (min-width:768px) {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
     @media screen and (min-width:1680px) {
         display: none;
     }
 }
 // ---MOBILE-MENU
 .mobile-menu {
-    transform: translateX(100%);
-    visibility: hidden;
+    transform: translateX(101%);
+    // visibility: hidden;
     pointer-events: none;
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
+    padding-top: 20px;
     background: rgba(17, 21, 24, 0.9);
     z-index: 9;
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    @media screen and (min-width:768px) {
+        padding-top: 40px; 
+    }
 
     @media screen and (max-width:1679.88px) {
         &.is-open {
             transform: translateX(0);
-            visibility: visible;
+            // visibility: visible;
             pointer-events: auto;
-
         }
     }
 }
@@ -147,21 +156,21 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 20px;
     margin-bottom: 40px;
     @media screen and (min-width:768px) {
-        padding-top: 40px;
         margin-bottom: 80px;
     }
 }
 .logo--mobile-menu {
     color: var(--color-main);
+    padding: 0;
 }
 .mobile-menu__btn--close {
-    padding: 5px;
     display: flex;
     align-items: center;
     border: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
     background-color: transparent;
 }
 .icon-menu {

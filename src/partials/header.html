@@ -17,19 +17,20 @@
           <li><a href="#about" class="navigation__link link-reset">about</a></li>
           <li><a href="#how-we-do" class="navigation__link link-reset">training options</a></li>
           <li><a href="#contacts" class="navigation__link link-reset">contacts</a></li>
+          
         </ul>
       </nav>
       <button type="button" class="consultation-btn" data-modal-open>consultation by phone</button>
       <button type="button" class="mobile-menu__btn" data-menu-open>
-        <svg width="21" height="12">
-          <use class="icon-menu" href="././images/symbol-defs.svg#menu"></use>
+        <svg class="menu" width="21" height="12">
+          <use href="././images/symbol-defs.svg#menu"></use>
         </svg>
       </button>
     </div>
     <div class="mobile-menu" data-menu>
       <div class="container">
         <div class="mobile-menu__header">
-          <a href="#" class="logo logo--mobile-menu link-reset">
+          <a href="#" class="logo logo--mobile-menu link-reset" data-link-5-close>
             <span class="logo__first-line">
               Hell
               <svg width="22" height="30">
@@ -46,10 +47,12 @@
           </button>
         </div>
         <ul class="mobile-menu__list ul-reset">
-          <li><a href="#program" class="mobile-menu__item link-reset">Studying program</a></li>
-          <li><a href="#about" class="mobile-menu__item link-reset">About</a></li>
-          <li><a href="#how-we-do" class="mobile-menu__item link-reset">Training options</a></li>
-          <li><a href="#contacts" class="mobile-menu__item link-reset">Contacts</a></li>
+          <li><a href="#program" class="mobile-menu__item link-reset" data-link-1-close>Studying program</a></li>
+          <li><a href="#about" class="mobile-menu__item link-reset" data-link-2-close>About</a></li>
+          <li><a href="#how-we-do" class="mobile-menu__item link-reset" data-link-3-close>Training options</a></li>
+          <li><a href="#contacts" class="mobile-menu__item link-reset" data-link-4-close>Contacts</a></li>
+          <!-- <li><a href="#contacts" class="mobile-menu__item link-reset" data-link-5-close>Contacts</a></li> -->
+          <!-- <li><button type="button" data-menu-close></button></li> -->
         </ul>
         <button type="button" class="consultation-btn--mobile">consultation by phone</button>
       </div>
