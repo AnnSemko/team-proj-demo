@@ -82,15 +82,18 @@
 
 @media screen and (min-width:1680px) {
 
+    .problems-container {
+        background-image: url(../images/fi.svg);
+        background-repeat: no-repeat;
+        background-position: bottom 170px right 2px;
+        
+    }
+
     .problems-section {
 
-        background-image: url(../images/fi.svg),
-            linear-gradient(to bottom,
-                var(--primary-color) 77%,
-                var(--color-main) 77%);
-        background-repeat: no-repeat;
-        background-position: bottom 142px right,bottom right;
+       
         padding-top: 80px;
+        
     }
 
     .problems-section__head {
