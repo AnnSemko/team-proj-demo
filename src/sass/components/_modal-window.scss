@@ -116,8 +116,10 @@ textarea:focus-visible {
 }
 
 .form__comment {
+  position: relative;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
   width: 100%;
 
   &__lable {
@@ -148,8 +150,21 @@ textarea:focus-visible {
     &:hover {
       outline: transparent;
       border: 2px solid var(--accent-color);
+      
     }
   }
+}
+.text-area-image{
+  width: 150px;
+  position: absolute;
+  bottom: 15px;
+  right: -140px;
+
+}
+
+.form__comment:focus-within .text-area-image {
+  transition: transform 1.2s linear;
+  transform: translateX(-680px);
 }
 
 .form__checkbox {
