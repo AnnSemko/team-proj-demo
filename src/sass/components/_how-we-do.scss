@@ -85,8 +85,8 @@
         width: 100%;
         height: 100%;
 
-        .how-we-do-it__item:hover &,
-            .how-we-do-it__item:focus & {
+        &:hover,
+            &:focus {
                 background-color: var(--accent-color);
             }
         
