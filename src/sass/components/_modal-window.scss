@@ -158,13 +158,13 @@ textarea:focus-visible {
   width: 150px;
   position: absolute;
   bottom: 15px;
-  right: -140px;
+  left: -150px;
 
 }
 
 .form__comment:focus-within .text-area-image {
-  transition: transform 1.2s linear;
-  transform: translateX(-680px);
+  transition: transform 3s linear;
+  transform: translateX(680px);
 }
 
 .form__checkbox {
