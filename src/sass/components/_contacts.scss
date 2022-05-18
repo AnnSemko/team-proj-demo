@@ -75,7 +75,8 @@
 }
 
 @media screen and (min-width: 768px){
-    .section-form{
+    .contacts{
+        background-size: 768px;
         background-image: url(../images/contacts/contacts-bg_768px.png/);
         
         @media screen and (min-device-pixel-ratio: 2),
@@ -83,8 +84,7 @@
             screen and (min-resolution: 2dppx) {
                 background-image: url(../images/contacts/contacts-bg_768px@2x.png);
             }
-    }
-    .contacts{
+   
         &__text-primary {
             margin: 0 auto 40px;
             font-size: 26px;
@@ -108,7 +108,8 @@
 }
 
 @media screen and (min-width: 1680px){
-    .section-form {
+    .contacts {
+        background-size: 1680px;
         background-image: url(../images/contacts/contacts-bg_1680px.png/);
 
         @media screen and (min-device-pixel-ratio: 2),
@@ -116,8 +117,7 @@
         screen and (min-resolution: 2dppx) {
             background-image: url(../images/contacts/contacts-bg_1680px@2x.png);
         }
-    }
-    .contacts{
+    
         &__text-primary {
             max-width: 1090px;
             margin-bottom: 40px;
