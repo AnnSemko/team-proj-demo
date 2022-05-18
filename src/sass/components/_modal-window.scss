@@ -25,7 +25,7 @@ textarea:focus-visible {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 98%;
-  height: 98%;
+  // height: 98%;
   padding: 20px;
   background-color: var(--primary-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -168,14 +168,17 @@ textarea:focus-visible {
 }
 
 .form__checkbox {
-  display: block;
+  display: flex;
+  align-items:center;
   text-align: center;
   margin-bottom: 30px;
 
   &__lable {
-    display: inline-block;
+    display: flex;
+    align-items:center;
     font-size: 12px;
     line-height: 1.17;
+    margin-right: 4px;
   }
 
   &__contract-link {
@@ -222,14 +225,14 @@ textarea:focus-visible {
 @media screen and (max-width:1679px) {
   .window {
     max-width: 450px;
-    height: 609px
+    min-height: 609px
   }
 }
 
-@media screen and (min-width: 16800px) {
+@media screen and (min-width: 1680px) {
   .window {
     max-width: 528px;
-    height: 581px;
+    min-height: 581px;
   }
 
   .form__checkbox__lable {
