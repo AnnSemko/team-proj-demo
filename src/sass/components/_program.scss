@@ -21,33 +21,32 @@ h4 {
 }
 
 .program__container {
-
     padding-left: 68px;
 
     &::after {
-        position: absolute;
-        right: 0px;
-        bottom: 40px;
-
-        content: '';
-        display: block;
-        width: 150px;
-        height: 137px;
-        background-image: linear-gradient(rgba(47, 48, 58, 0.4),
-                rgba(47, 48, 58, 0.4)), 
+            position: absolute;
+            right: 0px;
+            bottom: 40px;
+    
+            content: '';
+            display: block;
+            width: 150px;
+            height: 137px;
+            background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+                    rgba(47, 48, 58, 0.4)),
                 url(../images/program/program-img.jpg);
-        background-size: contain;
-    }
-}
-
-@media (min-device-pixel-ratio: 2),
-(min-resolution: 192dpi),
-(min-resolution: 2dppx) {
-    .program__container::after {
-        background-image: linear-gradient(rgba(47, 48, 58, 0.4),
-                rgba(47, 48, 58, 0.4)),
-                url(../images/program/program-img-2x.jpg);
-    }
+            background-size: contain;
+        }
+    
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            .program__container::after {
+                background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+                        rgba(47, 48, 58, 0.4)),
+                    url(../images/program/program-img-2x.jpg);
+            }
+        }
 }
 
 .semester__list::before {
@@ -60,7 +59,6 @@ h4 {
     height: 12px;
     border-radius: 50%;
     background: var(--accent-color);
-
 }
 
 .semester-title {
@@ -75,8 +73,6 @@ h4 {
     color: var(--color-main);
 }
 
-
-
 .semester-plan__description--position::before {
     display: block;
     content: "";
@@ -84,8 +80,7 @@ h4 {
     height: 1px;
     margin-bottom: 14px;
 
-    background-color: var(--accent-color);
-        
+    background-color: var(--accent-color);    
 }
 
 .semester-plan__list:not(:last-child) {
@@ -175,7 +170,6 @@ h4 {
     }
 }
 
-
 @media screen and (max-width:767px) {
     .program {
         padding-bottom: 145px;
@@ -191,7 +185,6 @@ h4 {
         height: 1112px;
     }
 }
-
 
 @media screen and (min-width:768px) and (max-width:1679px) {
     .program {
@@ -252,14 +245,26 @@ h4 {
     }
 }
 
-
-
 @media screen and (min-width:1680px) {
     .program {
         padding-top: 80px;
         padding-bottom: 366px;
         position: relative;
         margin-bottom: -128px;
+
+        &::before {
+            position: absolute;
+            top: 225px;
+            left: 0;
+            display: block;
+            content: '';
+            width: 100%;
+            border-bottom: 1px solid var(--color-main);
+        }
+    }
+    
+    .program--container {
+        position: relative;
     }
 
     .program__title {
@@ -271,19 +276,8 @@ h4 {
     .program__container {
         padding-left: 140px;
         padding-top: 48px;
-        
-        &::before {
-            position: absolute;
-            top: 225px;
-            left: 0;
-            display: block;
-            content: '';
-            width: 100%;
-            border-bottom: 1px solid var(--color-main);
-        }
-
         &::after {
-            bottom: 0;
+            bottom: -366px;
             left: 0;
 
             width: 684px;
@@ -306,8 +300,9 @@ h4 {
 
     .semester {
         display: flex;
+        position: relative;
     }
-
+    
     .semester__list {
         position: relative;
         width: 240px;
